@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Basket.API</name>
+    </assembly>
+    <members>
+        <member name="M:Basket.API.Controllers.BasketController.DeleteBasket(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
