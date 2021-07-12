@@ -1,7 +1,19 @@
 version: '3.4'
 services:
+  portainer:
+    image: portainer/portainer-ce
+
   catalogdb:
-    image: mongo    
+    image: mongo
+
+  basketdb:
+    image: redis
+
+  discountdb:
+    image: postgres
+
+  pgadmin:
+    image: dpage/pgadmin4
 
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
@@ -10,5 +22,24 @@ services:
       dockerfile: Services/Catalog/Catalog.API/Dockerfile
     depends_on : 
      - catalogdb
+
+  basket.api:
+    image: ${DOCKER_REGISTRY-}basketapi
+    build:
+      context: .
+      dockerfile: Services/Basket/Basket.API/Dockerfile
+    depends_on : 
+     - basketdb
+
+  discount.api:
+    image: ${DOCKER_REGISTRY-}discountapi
+    build:
+      context: .
+      dockerfile: Services/Discount/Discount.API/Dockerfile
+    depends_on : 
+       - discountdb
 volumes:
-  mongo_data: 
+  mongo_data:   
+  portainer_data:
+  postgres_data:
+  pgadmin_data:
