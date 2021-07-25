@@ -4,12 +4,76 @@
         <name>Basket.API</name>
     </assembly>
     <members>
+        <member name="M:Basket.API.Controllers.BasketController.UpdateBasket(Basket.API.Entities.ShoppingCart)">
+            <summary>
+            UpdateBasket
+            </summary>
+            <param name="shoppingCart"></param>
+            <returns></returns>
+        </member>
         <member name="M:Basket.API.Controllers.BasketController.DeleteBasket(System.String)">
             <summary>
             
             </summary>
             <param name="userName"></param>
             <returns></returns>
+        </member>
+        <member name="T:Discount.Grpc.Protos.DiscountReflection">
+            <summary>Holder for reflection information generated from discount.proto</summary>
+        </member>
+        <member name="P:Discount.Grpc.Protos.DiscountReflection.Descriptor">
+            <summary>File descriptor for discount.proto</summary>
+        </member>
+        <member name="F:Discount.Grpc.Protos.CouponModel.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:Discount.Grpc.Protos.CouponModel.ProductNameFieldNumber">
+            <summary>Field number for the "productName" field.</summary>
+        </member>
+        <member name="F:Discount.Grpc.Protos.CouponModel.DescriptionFieldNumber">
+            <summary>Field number for the "description" field.</summary>
+        </member>
+        <member name="F:Discount.Grpc.Protos.CouponModel.AmountFieldNumber">
+            <summary>Field number for the "amount" field.</summary>
+        </member>
+        <member name="F:Discount.Grpc.Protos.GetDiscountRequest.ProductNameFieldNumber">
+            <summary>Field number for the "productName" field.</summary>
+        </member>
+        <member name="F:Discount.Grpc.Protos.CreateDiscountRequest.CouponFieldNumber">
+            <summary>Field number for the "coupon" field.</summary>
+        </member>
+        <member name="F:Discount.Grpc.Protos.UpdateDiscountRequest.CouponFieldNumber">
+            <summary>Field number for the "coupon" field.</summary>
+        </member>
+        <member name="F:Discount.Grpc.Protos.DeleteDiscountRequest.ProductNameFieldNumber">
+            <summary>Field number for the "productName" field.</summary>
+        </member>
+        <member name="F:Discount.Grpc.Protos.DeleteDiscountResponse.SuccessFieldNumber">
+            <summary>Field number for the "success" field.</summary>
+        </member>
+        <member name="P:Discount.Grpc.Protos.DiscountProtoService.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:Discount.Grpc.Protos.DiscountProtoService.DiscountProtoServiceClient">
+            <summary>Client for DiscountProtoService</summary>
+        </member>
+        <member name="M:Discount.Grpc.Protos.DiscountProtoService.DiscountProtoServiceClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for DiscountProtoService</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:Discount.Grpc.Protos.DiscountProtoService.DiscountProtoServiceClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for DiscountProtoService that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:Discount.Grpc.Protos.DiscountProtoService.DiscountProtoServiceClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:Discount.Grpc.Protos.DiscountProtoService.DiscountProtoServiceClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:Discount.Grpc.Protos.DiscountProtoService.DiscountProtoServiceClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
         </member>
     </members>
 </doc>
