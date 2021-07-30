@@ -9,7 +9,7 @@ namespace Discount.Grpc.Repositories
 {
     public class DiscountRepository : IDiscountRepository
     {
-        private IConfiguration configuration;
+        private readonly IConfiguration configuration;
 
         public DiscountRepository(IConfiguration configuration)
         {

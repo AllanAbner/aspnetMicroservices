@@ -1,11 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
 using Discount.API.Entities;
 using Discount.API.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Net;
+using System.Threading.Tasks;
+
 //using Discount.API.Models;
 
 namespace Discount.API.Controllers
@@ -15,6 +14,7 @@ namespace Discount.API.Controllers
     public class DiscoundController : ControllerBase
     {
         private readonly IDiscountRepository repository;
+
         public DiscoundController(IDiscountRepository repository)
         {
             this.repository = repository;
@@ -29,7 +29,7 @@ namespace Discount.API.Controllers
 
             return Ok(discount);
         }
-        
+
         [HttpPost("")]
         public async Task<ActionResult<Coupon>> CreateDiscount([FromBody] Coupon coupon)
         {
@@ -48,7 +48,6 @@ namespace Discount.API.Controllers
         public async Task<ActionResult<bool>> DeleteTModelById(string productName)
         {
             return Ok(await repository.DeleteDiscount(productName));
-
         }
     }
 }

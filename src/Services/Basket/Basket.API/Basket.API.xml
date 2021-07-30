@@ -12,11 +12,11 @@
             <returns></returns>
         </member>
         <member name="M:Basket.API.Controllers.BasketController.DeleteBasket(System.String)">
-            <summary>
+             <summary>
             
-            </summary>
-            <param name="userName"></param>
-            <returns></returns>
+             </summary>
+             <param name="userName"></param>
+             <returns></returns>
         </member>
         <member name="T:Discount.Grpc.Protos.DiscountReflection">
             <summary>Holder for reflection information generated from discount.proto</summary>

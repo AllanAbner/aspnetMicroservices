@@ -3,7 +3,6 @@ using Basket.API.GrpcServices;
 using Basket.API.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -16,7 +15,6 @@ namespace Basket.API.Controllers
         private readonly IBasketRepository _repository;
         private readonly ILogger<BasketController> _logger;
         private readonly DiscountGrpcServices _discountGrpcServices;
-        
 
         public BasketController(IBasketRepository repository, ILogger<BasketController> logger, DiscountGrpcServices discountGrpcServices)
         {
@@ -52,7 +50,7 @@ namespace Basket.API.Controllers
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>

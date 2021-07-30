@@ -21,7 +21,7 @@ namespace Discount.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IDiscountRepository, DiscountRepository>();
-                      
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
