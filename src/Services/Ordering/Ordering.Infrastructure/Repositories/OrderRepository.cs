@@ -14,6 +14,7 @@ namespace Ordering.Infrastructure.Repositories
 
         public OrderRepository(OrderContext dbContext) : base(dbContext)
         {
+            this.dbContext = dbContext;
         }
 
         public async Task<IEnumerable<Order>> GetOrdersByUserName(string userName)

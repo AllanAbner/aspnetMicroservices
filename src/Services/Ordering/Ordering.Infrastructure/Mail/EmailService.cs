@@ -21,14 +21,25 @@ namespace Ordering.Infrastructure.Mail
 
         public async Task<bool> SendEmail(Email email)
         {
-            var client = new SendGridClient(emailSettings.ApiKey);
+            //var client = new SendGridClient(emailSettings.ApiKey);
 
-            var from = new EmailAddress(emailSettings.FromAddress, emailSettings.FromName);
-            var subject = "Sending with SendGrid is Fun";
-            var to = new EmailAddress(email.To);
-            var plainTextContent = "and easy to do anywhere, even with C#";
+            //var from = new EmailAddress(emailSettings.FromAddress, emailSettings.FromName);
+            //var subject = "Sending with SendGrid is Fun";
+            //var to = new EmailAddress(email.To);
+            //var plainTextContent = "and easy to do anywhere, even with C#";
+            //var htmlContent = "<strong>and easy to do anywhere, even with C#</strong>";
+            //var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+            //var response = await client.SendEmailAsync(msg);
+
+            var apiKey = "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";
+            var client = new SendGridClient(apiKey);
+            var from = new EmailAddress("allanabner_ti@hotmail.com", "Example User");
+            var subject = email.Subject;
+            var to = new EmailAddress(email.To, "Target Example User");
+            var plainTextContent = email.Body;
             var htmlContent = "<strong>and easy to do anywhere, even with C#</strong>";
             var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+
             var response = await client.SendEmailAsync(msg);
 
             logger.LogInformation("Email Sent");

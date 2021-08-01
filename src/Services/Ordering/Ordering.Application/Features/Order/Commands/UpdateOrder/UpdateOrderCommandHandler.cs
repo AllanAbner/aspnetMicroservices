@@ -35,7 +35,7 @@ namespace Ordering.Application.Features.Order.Commands.UpdateOrder
                 }
             }
 
-            mapper.Map(request, typeof(UpdateOrderCommand), typeof(Domain.Entities.Order));
+            mapper.Map(request, orderToUpdate, typeof(UpdateOrderCommand), typeof(Domain.Entities.Order));
 
             await orderRepository.UpdateAsync(orderToUpdate);
 
