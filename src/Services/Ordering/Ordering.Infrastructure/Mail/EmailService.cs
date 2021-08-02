@@ -31,7 +31,7 @@ namespace Ordering.Infrastructure.Mail
             //var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
             //var response = await client.SendEmailAsync(msg);
 
-            var apiKey = "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";
+            var apiKey = "";
             var client = new SendGridClient(apiKey);
             var from = new EmailAddress("allanabner_ti@hotmail.com", "Example User");
             var subject = email.Subject;
