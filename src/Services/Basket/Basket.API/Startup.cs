@@ -35,6 +35,8 @@ namespace Basket.API
                 opt.Address = new System.Uri(Configuration["GrpcSettings:DiscountUrl"]);
             });
 
+            services.AddAutoMapper(typeof(Startup));
+
             // MassTransit-RabbitMQ Configuration
             services.AddMassTransit(config =>
             {
